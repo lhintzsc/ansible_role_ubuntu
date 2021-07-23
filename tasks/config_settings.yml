@@ -12,21 +12,21 @@
     src: .bashrc
     dest: ~/.bash_aliases
   notify:
-  - source_bashrc
+  - source bashrc
 
 - name: Copy bashrc file
   copy:
     src: .bashrc
     dest: ~/.bashrc
   notify:
-  - source_bashrc
+  - source bashrc
 
 - name: "Copy environment to set proxy: {{ ubuntu_http_proxy }}"
   template:
     src: environment.j2
     dest: /etc/environment
   notify:
-  - source_environment
+  - source environment
   
 - name: "Set system timezone to {{ ubuntu_timezone }}"
   timezone:
@@ -37,4 +37,4 @@
     src: ntp.conf.j2
     dest: /etc/ntp.conf
   notify:
-  - restart_ntpd
+  - restart ntpd
