@@ -21,10 +21,10 @@
   notify:
   - Source bashrc
 
-- name: "Copy profile to set proxy: {{ ubuntu_http_proxy }}"
+- name: "Copy environment to set proxy: {{ ubuntu_http_proxy }}"
   template:
-    src: profile.j2
-    dest: /etc/profile
+    src: environment.j2
+    dest: /etc/environment
   notify:
   - Source bashrc
   
