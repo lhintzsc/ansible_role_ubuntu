@@ -12,6 +12,6 @@
       - net-tools
       - unzip
       - default-jdk
-    update_cache: false
+    update_cache: true
     state: latest
   register: result
