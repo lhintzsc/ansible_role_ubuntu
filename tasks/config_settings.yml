@@ -15,7 +15,7 @@
   - source bashrc
 
 - name: Copy bash_proxy file
-  copy:
+  template:
     src: .bash_proxy
     dest: ~/.bash_proxy
   notify:
