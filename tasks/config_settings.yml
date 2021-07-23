@@ -16,7 +16,7 @@
 
 - name: Copy bash_proxy file
   template:
-    src: .bash_proxy.j2
+    src: bash_proxy.j2
     dest: ~/.bash_proxy
   notify:
   - source bashrc
