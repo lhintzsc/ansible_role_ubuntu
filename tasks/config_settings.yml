@@ -22,7 +22,6 @@
   - Source bashrc
 
 - name: "Copy environment to set proxy: {{ ubuntu_http_proxy }}"
-  become: true
   template:
     src: environment.j2
     dest: /etc/environment
