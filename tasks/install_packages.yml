@@ -1,5 +1,5 @@
 - name: Install basic packages
-  yum:
+  apt:
     name:
       - vim-enhanced
       - git
