@@ -12,6 +12,7 @@
       - net-tools
       - unzip
       - default-jdk
+      - docker
     update_cache: false
     state: latest
   environment:
