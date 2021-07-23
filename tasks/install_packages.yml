@@ -14,5 +14,4 @@
       - default-jdk
     update_cache: false
     state: latest
-ubuntu_https_proxy: 
   register: result
