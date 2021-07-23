@@ -1,0 +1,43 @@
+- name: Set hostname
+  hostname: 
+    name: "{{centos_hostname}}"
+
+- name: Copy vimrc file
+  copy:
+    src: .vimrc
+    dest: ~/.vimrc
+
+- name: Copy bash_aliases file
+  copy:
+    src: .bashrc
+    dest: ~/.bash_aliases
+  notify:
+  - Source bashrc  
+
+- name: Copy bashrc file
+  copy:
+    src: .bashrc
+    dest: ~/.bashrc
+  notify:
+  - Source bashrc
+
+- name: "Copy profile to set proxy: {{ centos_http_proxy }}"
+  template:
+    src: profile.j2
+    dest: /etc/profile
+  notify:
+  - Source bashrc
+  
+- name: "Set system timezone to {{ centos_timezone }}"
+  timezone:
+    name: "{{ centos_timezone }}"
+
+- name: "Copy NTP conf {{ centos_ntp_server }}  to /etc/ntp.conf"
+  template:
+    src: ntp.conf.j2
+    dest: /etc/ntp.conf
+    owner: root
+    group: wheel
+    mode: u=r+w,g=r,o=r
+  notify:
+  - Restart ntpd

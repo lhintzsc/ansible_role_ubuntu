@@ -1,0 +1,6 @@
+---
+ubuntu_timezone: "Europe/Vienna"
+ubuntu_hostname: "{{ inventory_hostname }}"
+ubuntu_ntp_server: "{{ vault_ubuntu_ntp_server }}"
+ubuntu_http_proxy: "{{ vault_ubuntu_http_proxy }}"
+ubuntu_https_proxy: "{{ vault_ubuntu_https_proxy }}"
