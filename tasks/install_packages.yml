@@ -1,4 +1,5 @@
 - name: Install basic packages
+  become_user: root
   apt:
     name:
       - vim
