@@ -2,6 +2,9 @@
 - name: Source bashrc
   shell: source ~/.bashrc
 
+- name: Source environment
+  shell: source /etc/environment
+
 - name: Restart ntpd
   service:
     name: ntpd
