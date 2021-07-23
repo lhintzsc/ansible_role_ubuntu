@@ -15,7 +15,4 @@
       - docker
     update_cache: false
     state: latest
-  environment:
-    http_proxy: "{{ ubuntu_http_proxy }}"
-    https_proxy: "{{ ubuntu_https_proxy }}"
   register: result
