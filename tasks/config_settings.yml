@@ -38,3 +38,5 @@
     dest: /etc/ntp.conf
   notify:
   - restart ntpd
+
+- meta: flush_handlers
