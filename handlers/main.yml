@@ -1,11 +1,11 @@
 ---
-- name: Source bashrc
+- name: source_bashrc
   shell: source ~/.bashrc
 
-- name: Source environment
+- name: source_environment
   shell: source /etc/environment
 
-- name: Restart ntpd
+- name: restart_ntpd
   service:
     name: ntpd
     state: restarted 
