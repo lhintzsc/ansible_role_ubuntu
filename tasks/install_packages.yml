@@ -12,7 +12,7 @@
       - net-tools
       - unzip
       - default-jdk
-      - docker
+      - docker.io
     update_cache: false
     state: latest
   register: result
